@@ -5,7 +5,7 @@ export default function Banner() {
   return (
     <View style={styles.banner}>
       <Image
-        source={{ uri: 'https://via.placeholder.com/800x200' }} // Placeholder para o banner
+        source={require('../../assets/img/git.webp')} // Placeholder para o banner
         style={styles.image}
       />
     </View>

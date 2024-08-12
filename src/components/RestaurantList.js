@@ -2,9 +2,14 @@ import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 
 const restaurants = [
-  { name: 'Pizzaria Italia', image: require('../../assets/img/icon.png'), rating: 4.5 },
-  { name: 'Hamburgueria Gourmet', image: require('../../assets/img/icon.png'), rating: 4.7 },
-  { name: 'Sushi Place', image: require('../../assets/img/icon.png'), rating: 4.8 },
+  { name: 'Pizzaria Italia', image: require('../../assets/img/pizza.webp'), rating: 4.5 },
+  { name: 'Hamburgueria Gourmet', image: require('../../assets/img/hamburguer.jpg'), rating: 4.7 },
+  { name: 'Sushi Place', image: require('../../assets/img/suchi.jpg'), rating: 4.8 },
+  { name: 'Sushi Place', image: require('../../assets/img/suchi.jpg'), rating: 4.8 },
+  { name: 'Sushi Place', image: require('../../assets/img/suchi.jpg'), rating: 4.8 },
+  { name: 'Sushi Place', image: require('../../assets/img/suchi.jpg'), rating: 4.8 },
+  { name: 'Sushi Place', image: require('../../assets/img/suchi.jpg'), rating: 4.8 },
+  { name: 'Sushi Place', image: require('../../assets/img/suchi.jpg'), rating: 4.8 },
 ];
 
 export default function RestaurantList() {

@@ -17,7 +17,7 @@ export default function Header() {
 
 const styles = StyleSheet.create({
   header: {
-    backgroundColor: 'red',
+    backgroundColor: 'white',
     padding: 30,
   },
   logo: {
@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   navItem: {
-    color: '#fff',
+    color: 'black',
     fontSize: 16,
   },
 });
