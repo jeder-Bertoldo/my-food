@@ -1,20 +1,20 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, ScrollView } from 'react-native';
 
 const restaurants = [
   { name: 'Pizzaria Italia', image: require('../../assets/img/pizza.webp'), rating: 4.5 },
   { name: 'Hamburgueria Gourmet', image: require('../../assets/img/hamburguer.jpg'), rating: 4.7 },
-  { name: 'Sushi Place', image: require('../../assets/img/suchi.jpg'), rating: 4.8 },
-  { name: 'Sushi Place', image: require('../../assets/img/suchi.jpg'), rating: 4.8 },
-  { name: 'Sushi Place', image: require('../../assets/img/suchi.jpg'), rating: 4.8 },
-  { name: 'Sushi Place', image: require('../../assets/img/suchi.jpg'), rating: 4.8 },
-  { name: 'Sushi Place', image: require('../../assets/img/suchi.jpg'), rating: 4.8 },
-  { name: 'Sushi Place', image: require('../../assets/img/suchi.jpg'), rating: 4.8 },
+  { name: 'Tudão lanches', image: require('../../assets/img/tudao.webp'), rating: 4.8 },
+  { name: 'Açai do zulu', image: require('../../assets/img/acai.jpg'), rating: 4.9 },
+  { name: 'Salgadinhos da ana', image: require('../../assets/img/salgadinho.jpeg'), rating: 5.0 },
+  { name: 'Casa do Salgado', image: require('../../assets/img/casaSalgado.png'), rating: 3.8 },
+  { name: 'Geladinho', image: require('../../assets/img/gelado.jpg'), rating: 4.5 },
+  { name: 'Chaumas', image: require('../../assets/img/chaumas.webp'), rating: 4.7 },
 ];
 
 export default function RestaurantList() {
   return (
-    <View style={styles.container}>
+    <ScrollView contentContainerStyle={styles.scrollContainer}>
       <Text style={styles.title}>Restaurantes</Text>
       <View style={styles.grid}>
         {restaurants.map((restaurant, index) => (
@@ -25,12 +25,12 @@ export default function RestaurantList() {
           </View>
         ))}
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  scrollContainer: {
     padding: 20,
   },
   title: {
