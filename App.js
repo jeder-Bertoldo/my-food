@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, ScrollView, StyleSheet } from 'react-native';
+import { View, ScrollView, StyleSheet, Text } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import Header from './src/components/Header';
 import Banner from './src/components/Banner';
 import Categories from './src/components/Categories';
@@ -11,19 +12,21 @@ export default function App() {
   const [currentScreen, setCurrentScreen] = useState('Home');
 
   return (
-    <View style={styles.container}>
-      {currentScreen === 'Home' ? (
-        <ScrollView>
-          <Header onGoToOrders={() => setCurrentScreen('Pedidos')} />
-          <Banner />
-          <Categories />
-          <RestaurantList />
-          <Footer />
-        </ScrollView>
-      ) : (
-        <OrdersScreen goBack={() => setCurrentScreen('Home')} />
-      )}
-    </View>
+    <SafeAreaProvider>
+      <View style={styles.container}>
+        {currentScreen === 'Pedidos' ? (
+          <OrdersScreen goBack={() => setCurrentScreen('Home')} />
+        ) : (
+          <ScrollView>
+            <Header onGoToOrders={() => setCurrentScreen('Pedidos')} />
+            <Banner />
+            <Categories />
+            <RestaurantList />
+            <Footer />
+          </ScrollView>
+        )}
+      </View>
+    </SafeAreaProvider>
   );
 }
 
